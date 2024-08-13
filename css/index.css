@@ -30,3 +30,86 @@ header .showtime {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.25rem;
 }
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0.125rem 0.125rem;
+}
+.mainbox .colum {
+  flex-grow: 3;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+.mainbox .colum:nth-child(2) {
+  flex-grow: 5;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+.mainbox .panel {
+  position: relative;
+  height: 3.875rem;
+  padding: 0 0.1875rem 0.5rem;
+  margin-bottom: 0.1875rem;
+  background-image: url(../images/line\(1\).png) rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(25, 186, 139, 0.17);
+}
+.mainbox .panel:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+.mainbox .panel:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+.mainbox .panel .panel-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.mainbox .panel .panel-footer:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid white;
+  border-left: 2px solid white;
+}
+.mainbox .panel .panel-footer:after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+.mainbox .panel .h2 {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 400;
+}
+.mainbox .panel .chart {
+  height: 3rem;
+  background-color: pink;
+}
