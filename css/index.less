@@ -4,6 +4,15 @@
   box-sizing: border-box;
 
 }
+li{
+  list-style: none;
+}
+
+//声明字体
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
 
 body{
   
@@ -51,6 +60,10 @@ header{
     flex-grow: 5;
     flex-shrink: 1;
     flex-basis: 0%;
+    margin-top: 0;
+    margin-left: .125rem;
+    margin-right: .125rem;
+    margin-bottom: .1875rem;
   }
 
 
@@ -66,8 +79,8 @@ header{
       top: 0;
       left: 0;
       content: "";
-      width: 10px;
-      height: 10px;
+      width: .125rem;
+      height: .125rem ;
       border-top: 2px solid white;
       border-left: 2px solid white;
     }
@@ -76,8 +89,8 @@ header{
       top: 0;
       right: 0;
       content: "";
-      width: 10px;
-      height: 10px;
+      width: .125rem;
+      height: .125rem;
       border-top: 2px solid white;
       border-right: 2px solid white;
     }
@@ -86,13 +99,14 @@ header{
       left: 0;
       bottom: 0;
       width: 100%;
+      height: .25rem;
       &:before {
         position: absolute;
         bottom: 0;
         left: 0;
         content: "";
-        width: 10px;
-        height: 10px;
+        width: .125rem;
+        height: .125rem;
         border-bottom: 2px solid white;
         border-left: 2px solid white;
       }
@@ -101,23 +115,87 @@ header{
         bottom: 0;
         right: 0;
         content: "";
-        width: 10px;
-        height: 10px;
+        width: .125rem;
+        height: .125rem;
         border-bottom: 2px solid white;
         border-right: 2px solid white;
       }
     }
-    .h2 {
+    h2 {
       height: 0.6rem;
       line-height: 0.6rem;
       text-align: center;
-      color: #fff;
-      font-size: 20px;
+      color: #ffeb7b;
+      font-size: .25rem;
       font-weight: 400;
     }
     .chart {
       height: 3rem;
       background-color: pink;
+    }
+  }
+}
+
+.num{
+  padding: .1875rem;
+  background-color: rgba(101, 132, 226, 0.1);
+  .num-head{
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    position: relative;
+    &::before{
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: .375rem;
+      height: .125rem;
+      border-left: 2px solid white;
+      border-top: 2px solid white;
+      content: "";
+
+    }
+    &::after{
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: .375rem;
+      height: .125rem;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      content: "";
+
+    }
+    ul{
+      display: flex;
+      li{
+        position: relative;
+        flex: 1;
+        line-height: 1rem;
+        font-size: .875rem;
+        color: #ffeb7b;
+        text-align: center;
+        font-family: "electronicFont";
+        &:first-child::after{
+          position: absolute;
+          content: "";
+          top:25%;
+          height: 50%;
+          right: 0;
+          border-right: 1px solid white;
+        }
+      }
+    }
+  }
+  .num-body{
+    ul{
+      display: flex;
+      li{
+        flex: 1;
+        color: rgba(255, 255, 255, 0.7) ;
+        font-size: .225rem;
+        height: .5rem;
+        padding-top: .125rem;
+        text-align: center;
+      }
     }
   }
 }
