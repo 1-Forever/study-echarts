@@ -184,3 +184,68 @@ header .showtime {
   padding-top: 0.125rem;
   text-align: center;
 }
+.map {
+  position: relative;
+  height: 10.125rem;
+}
+.map .map1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/map.png);
+  background-size: 100% 100%;
+  width: 6.475rem;
+  height: 6.475rem;
+  opacity: 0.3;
+}
+.map .map2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 8.0375rem;
+  height: 8.0375rem;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/lbx.png);
+  background-size: 100% 100%;
+  animation: rotate 15s linear infinite;
+  opacity: 0.6;
+  z-index: 2;
+}
+.map .map3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7.075rem;
+  height: 7.075rem;
+  transform: translate(-50%, -50%);
+  background-image: url(../images/jt.png);
+  background-size: 100% 100%;
+  animation: ne-rotate 10s linear infinite;
+  opacity: 0.6;
+  z-index: 2;
+}
+.map .chart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10.125rem;
+  width: 100%;
+  z-index: 5;
+}
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@keyframes ne-rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
